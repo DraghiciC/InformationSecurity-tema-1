@@ -7,7 +7,7 @@ path2 = "/tmp/atob.fifo"
 path = "/tmp/intclt.fifo"
 path3 = "/tmp/atobkey.fifo"
 path4 = "/tmp/btoa.fifo"
-os.remove(path4)
+#os.remove(path4)
 os.mkfifo(path4)
 
 fifo2 = open(path2, "r")   #primesc modul de operare
