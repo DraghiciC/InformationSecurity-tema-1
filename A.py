@@ -7,13 +7,13 @@ mode="OFB"
 #mode="CBC"
 path0 = "/tmp/ktoa.fifo"
 path1 = "/tmp/intclt.fifo"
-os.remove(path1)
+#os.remove(path1)
 os.mkfifo(path1)
 path2 = "/tmp/atob.fifo"
-os.remove(path2)
+#os.remove(path2)
 os.mkfifo(path2)
 path3 = "/tmp/atobkey.fifo"
-os.remove(path3)
+#os.remove(path3)
 os.mkfifo(path3)
 path4 = "/tmp/btoa.fifo"
 
