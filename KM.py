@@ -6,7 +6,7 @@ iv = b"vectinitializare"
 k=b"thisisamasterkey"
 #v=b"a secret message"
 path0 = "/tmp/ktoa.fifo"
-os.remove(path0)
+#os.remove(path0)
 os.mkfifo(path0)
 v=token_bytes(16)  #Generez o cheie random
 print(v)
