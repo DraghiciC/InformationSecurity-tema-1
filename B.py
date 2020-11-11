@@ -35,6 +35,7 @@ fifo = open(path, "rb")
 for lin in fifo:
     line=line+lin
 if mode=="CBC":  # CBC
+    line=line[16:]
     while line:
         l=line[:16]
         line=line[16:]
@@ -45,12 +46,6 @@ if mode=="CBC":  # CBC
         iv=l
         message=message+v.decode('ascii')
 else:   # OFB
-    l = line[:16]
-    line = line[16:]
-    cipher = Cipher(algorithms.AES(key), modes.CBC(iv))
-    encryptor = cipher.encryptor()
-    iv = encryptor.update(iv) + encryptor.finalize()
-    v = bytes([_a ^ _b for _a, _b in zip(l, iv)])
     while line:
         l=line[:16]
         line=line[16:]
